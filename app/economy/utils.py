@@ -82,14 +82,14 @@ def convert_token_to_usdt(from_token, timestamp=None):
         return convert_amount(in_eth, 'ETH', "USDT", timestamp)
 
 
-def etherscan_link(txid):
-    """Build the Etherscan URL.
+def blockscout_link(txid):
+    """Build the Blockscout URL.
 
     Args:
         txid (str): The transaction ID.
 
     Returns:
-        str: The Etherscan TX URL.
+        str: The Blockscout TX URL.
 
     """
-    return f'https://etherscan.io/tx/{txid}'
+    return f'https://blockscout.com/eth/mainnet/tx/{txid}'

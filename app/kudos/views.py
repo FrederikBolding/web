@@ -536,7 +536,7 @@ def receive(request, key, txid, network):
         messages.info(request, f'This tx {kudos_transfer.txid}, failed.  Please contact the sender and ask them to send the tx again.')
     elif not_mined_yet and not request.GET.get('receive_txid'):
         message = mark_safe(
-            f'The <a href="https://etherscan.io/tx/{txid}">transaction</a> is still mining.  '
+            f'The <a href="https://blockscout.com/eth/mainnet/tx/{txid}">transaction</a> is still mining.  '
             'Please wait a moment before submitting the receive form.'
         )
         messages.info(request, message)

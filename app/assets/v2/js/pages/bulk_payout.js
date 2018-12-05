@@ -64,8 +64,8 @@ $(document).ready(function($) {
         if (error) {
           _alert({ message: error }, 'error');
         } else {
-          var url = 'https://' + etherscanDomain() + '/tx/' + txid;
-          var msg = 'This tx has been sent 👌 <a target=_blank href="' + url + '">[Etherscan Link]</a>';
+          var url = 'https://' + blockscoutDomain() + '/tx/' + txid;
+          var msg = 'This tx has been sent 👌 <a target=_blank href="' + url + '">[Blockscout Link]</a>';
 
           // send msg to frontend
           _alert(msg, 'info');
@@ -104,8 +104,8 @@ $(document).ready(function($) {
       var expires = 9999999999;
 
       var success_callback = function(txid) {
-        var url = 'https://' + etherscanDomain() + '/tx/' + txid;
-        var msg = 'This payment has been sent 👌 <a target=_blank href="' + url + '">[Etherscan Link]</a>';
+        var url = 'https://' + blockscoutDomain() + '/tx/' + txid;
+        var msg = 'This payment has been sent 👌 <a target=_blank href="' + url + '">[Blockscout Link]</a>';
 
         // send msg to frontend
         _alert(msg, 'info');

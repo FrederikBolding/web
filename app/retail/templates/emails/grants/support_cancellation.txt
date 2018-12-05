@@ -26,7 +26,7 @@
 
 {% trans "Goal" %}
 
-{% trans "You can see your cancellation transaction on etherscan" %}
+{% trans "You can see your cancellation transaction on blockscout" %}
 
 {{ transaction.link }}
 

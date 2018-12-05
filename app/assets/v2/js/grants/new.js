@@ -88,7 +88,7 @@ $(document).ready(function() {
             console.log('2', transactionHash);
             $('#transaction_hash').val(transactionHash);
             document.issueURL = $('#input-url').val();
-            const linkURL = etherscan_tx_url(transactionHash);
+            const linkURL = 'https://blockscout.com/eth/mainnet/tx/' + transactionHash;
 
             $('#transaction_url').attr('href', linkURL);
             enableWaitState('#new-grant');

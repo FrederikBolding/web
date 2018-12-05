@@ -93,8 +93,8 @@ window.onload = function() {
       var expires = 9999999999;
 
       var success_callback = function(txid) {
-        var url = 'https://' + etherscanDomain() + '/tx/' + txid;
-        var msg = 'The tip has been sent 👌 <a target=_blank href="' + url + '">[Etherscan Link]</a>';
+        var url = 'https://' + blockscoutDomain() + '/tx/' + txid;
+        var msg = 'The tip has been sent 👌 <a target=_blank href="' + url + '">[Blockscout Link]</a>';
 
         // send msg to frontend
         _alert(msg, 'info');
@@ -126,8 +126,8 @@ window.onload = function() {
       var kudosId = selected_kudos.id;
       var tokenId = selected_kudos.token_id;
       var success_callback = function(txid) {
-        var url = 'https://' + etherscanDomain() + '/tx/' + txid;
-        var msg = 'The Kudos has been sent 👌 <a target=_blank href="' + url + '">[Etherscan Link]</a>';
+        var url = 'https://' + blockscoutDomain() + '/tx/' + txid;
+        var msg = 'The Kudos has been sent 👌 <a target=_blank href="' + url + '">[Blockscout Link]</a>';
 
         // send msg to frontend
         _alert(msg, 'info');

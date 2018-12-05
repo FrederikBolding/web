@@ -399,7 +399,7 @@ def profile(request):
         'frequency': 'days',
         'value_in_usdt_now': 80,
         'title': 'Lorem ipsum dolor sit amet',
-        'link': 'https://etherscan.io/txs?a=0xcf267ea3f1ebae3c29fea0a3253f94f3122c2199&f=3',
+        'link': 'https://blockscout.com/eth/mainnet/tx/0x2c049ea1620e61243174b9e1573e64655d55ff8d93508e76e2c640bbe8216fd0',
         'avatar_url': 'https://c.gitcoin.co/avatars/57e79c0ae763bb27095f6b265a1a8bf3/thelostone-mc.svg'
     }, {
         'date': '24 April',
@@ -408,7 +408,7 @@ def profile(request):
         'frequency': 'months',
         'value_in_usdt_now': 90,
         'title': 'Lorem ipsum dolor sit amet',
-        'link': 'https://etherscan.io/txs?a=0xcf267ea3f1ebae3c29fea0a3253f94f3122c2199&f=3',
+        'link': 'https://blockscout.com/eth/mainnet/tx/0x2c049ea1620e61243174b9e1573e64655d55ff8d93508e76e2c640bbe8216fd0',
         'avatar_url': 'https://c.gitcoin.co/avatars/57e79c0ae763bb27095f6b265a1a8bf3/thelostone-mc.svg'
     }]
 

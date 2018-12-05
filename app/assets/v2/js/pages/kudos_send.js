@@ -110,22 +110,22 @@ var updateEstimate = function(e) {
   });
 };
 
-var etherscanDomain = function() {
-  var etherscanDomain = 'etherscan.io';
+var blockscoutDomain = function() {
+  var blockscoutDomain = 'blockscout.com/eth/mainnet/';
 
   if (document.web3network == 'custom network') {
     // testrpc
-    etherscanDomain = 'localhost';
+    blockscoutDomain = 'localhost';
   } else if (document.web3network == 'rinkeby') {
     // rinkeby
-    etherscanDomain = 'rinkeby.etherscan.io';
+    blockscoutDomain = 'blockscout.com/eth/rinkeby/';
   } else if (document.web3network == 'ropsten') {
     // ropsten
-    etherscanDomain = 'ropsten.etherscan.io';
+    blockscoutDomain = 'blockscout.com/eth/ropsten/';
   } else {
     // mainnet
   }
-  return etherscanDomain;
+  return blockscoutDomain;
 };
 
 var renderWallets = function(profileId) {
@@ -292,7 +292,7 @@ $(document).ready(function() {
     var success_callback = function(txid) {
 
       startConfetti();
-      var url = 'https://' + etherscanDomain() + '/tx/' + txid;
+      var url = 'https://' + blockscoutDomain() + '/tx/' + txid;
 
       $('#loading_trans').html('This transaction has been sent 👌');
       $('#loading_trans').hide();

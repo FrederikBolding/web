@@ -22,7 +22,7 @@ from datetime import datetime
 from django.test.client import RequestFactory
 
 from economy.models import ConversionRate
-from economy.utils import convert_amount, etherscan_link
+from economy.utils import convert_amount, blockscout_link
 from test_plus.test import TestCase
 
 
@@ -65,7 +65,7 @@ class EconomyUtilsTest(TestCase):
         result = convert_amount(2, 'ETH', 'USDT', datetime(2018, 1, 1))
         assert round(result, 1) == 10
 
-    def test_etherscan_link(self):
+    def test_blockscout_link(self):
         """Test the economy util etherscan_link method."""
         txid = '0xcb39900d98fa00de2936d2770ef3bfef2cc289328b068e580dc68b7ac1e2055b'
-        assert etherscan_link(txid) == 'https://etherscan.io/tx/0xcb39900d98fa00de2936d2770ef3bfef2cc289328b068e580dc68b7ac1e2055b'
+        assert blockscout_link(txid) == 'https://blockscout.com/eth/mainnet/tx/0xcb39900d98fa00de2936d2770ef3bfef2cc289328b068e580dc68b7ac1e2055b'

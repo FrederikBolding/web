@@ -483,7 +483,7 @@ def build_profile_pairs(bounty):
         if fulfillment.profile and fulfillment.profile.handle.strip() and fulfillment.profile.absolute_url:
             profile_handles.append((fulfillment.profile.handle, fulfillment.profile.absolute_url))
         else:
-            addr = f"https://etherscan.io/address/{fulfillment.fulfiller_address}"
+            addr = f"https://blockscout.com/eth/mainnet/address/{fulfillment.fulfiller_address}"
             profile_handles.append((fulfillment.fulfiller_address, addr))
     return profile_handles
 

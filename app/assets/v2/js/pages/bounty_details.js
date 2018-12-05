@@ -13,7 +13,7 @@ var address_ize = function(key, val) {
   if (!_truthy(val)) {
     return [ null, null ];
   }
-  return [ key, '<a href="https://etherscan.io/address/' + val + '" target="_blank" rel="noopener noreferrer">' + val + '</a>' ];
+  return [ key, '<a href="https://blockscout.com/eth/mainnet/address/' + val + '" target="_blank" rel="noopener noreferrer">' + val + '</a>' ];
 };
 
 var gitcoin_ize = function(key, val) {
@@ -452,7 +452,7 @@ var showWarningMessage = function(txid) {
   if (typeof txid != 'undefined' && txid.indexOf('0x') != -1) {
     waitforWeb3(function() {
       clearInterval(interval);
-      var link_url = etherscan_tx_url(txid);
+      var link_url = 'https://blockscout.com/eth/mainnet/tx/' + txid;
 
       $('#transaction_url').attr('href', link_url);
     });
